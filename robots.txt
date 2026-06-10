@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://freelance.abhimanyupatil.com/sitemap.xml
