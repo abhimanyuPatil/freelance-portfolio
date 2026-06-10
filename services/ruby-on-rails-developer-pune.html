@@ -36,6 +36,154 @@
   
   <!-- Stylesheet (Relative to parent folder) -->
   <link rel="stylesheet" href="../index.css">
+
+  <!-- Structured Data / JSON-LD for Local, Person, Breadcrumb & FAQPage SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://freelance.abhimanyupatil.com/#service",
+        "name": "Abhimanyu Patil - Freelance Ruby on Rails Developer in Pune",
+        "url": "https://freelance.abhimanyupatil.com",
+        "logo": "https://freelance.abhimanyupatil.com/assets/logo.png",
+        "image": "https://freelance.abhimanyupatil.com/assets/og-image.jpg",
+        "description": "Hire a senior Freelance Ruby on Rails Developer in Pune. Specializing in Rails consulting, custom APIs, SaaS products, and database query tuning across India.",
+        "telephone": "+91 8446161390",
+        "email": "abhimanyu.patil39@gmail.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Koregaon Park",
+          "addressLocality": "Pune",
+          "addressRegion": "Maharashtra",
+          "postalCode": "411001",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.5362",
+          "longitude": "73.8940"
+        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Pune"
+          },
+          {
+            "@type": "Country",
+            "name": "India"
+          }
+        ],
+        "knowsAbout": [
+          "Ruby on Rails Development",
+          "Rails Consultant",
+          "Ruby Developer India",
+          "PostgreSQL",
+          "Redis",
+          "Sidekiq Backend Workers"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://freelance.abhimanyupatil.com/#person",
+        "name": "Abhimanyu Patil",
+        "jobTitle": "Senior Freelance Ruby on Rails Consultant",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Pune University"
+        },
+        "sameAs": [
+          "https://github.com/abhimanyuPatil/",
+          "https://www.linkedin.com/in/abhimanyu-patil91/"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://freelance.abhimanyupatil.com/services/ruby-on-rails-developer-pune.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://freelance.abhimanyupatil.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://freelance.abhimanyupatil.com#services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Ruby on Rails Developer",
+            "item": "https://freelance.abhimanyupatil.com/services/ruby-on-rails-developer-pune.html"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://freelance.abhimanyupatil.com/services/ruby-on-rails-developer-pune.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Ruby on Rails still relevant in 2026?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Rails remains the framework of choice for companies prioritizing delivery speed and stability. Major platforms like GitHub, Shopify, and Airbnb run on Rails. Rails 7.x/8.x introduced native importmaps, solid queue systems, and robust performance improvements that keep it highly competitive in 2026."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does Ruby on Rails development cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "My consulting and freelance pricing is structured to offer senior-level development at competitive rates. Because you work with me directly, you skip the agency margin. I offer both hourly consulting rates and fixed-price project quotes depending on your requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you modernize an existing Rails application?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. I frequently take over older codebases, upgrade Ruby and Rails versions (e.g., from Rails 4/5 to 7.x), refactor fat models and controllers, resolve database query bottlenecks, and transition hosting setups to Docker/AWS."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide AWS deployment support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. I configure secure deployment pipelines on AWS using EC2, RDS (for PostgreSQL/MySQL databases), S3 (for assets), and configure SSL certs. I can also help dockerize your Rails application for ECS containerized deployment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you work with offshore teams?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. I have years of experience working within distributed engineering teams, collaborating asynchronously using Slack, GitHub pull request reviews, Jira task boards, and aligning timezone slots for stand-up meetings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide ongoing maintenance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. I offer monthly retainer agreements to monitor server uptime, apply critical security patches (gems updates), monitor background workers (Sidekiq queues), perform database optimizations, and resolve bugs as they emerge."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Ambient background glow effects -->
@@ -80,6 +228,21 @@
   </div>
 
   <main>
+    <!-- Visual Breadcrumb Navigation Trail -->
+    <div class="breadcrumb-container" style="background-color: rgba(0,0,0,0.15); border-bottom: 1px solid var(--border-color);">
+      <div class="section-container" style="padding-block: 1rem;">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <ol style="list-style: none; display: flex; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono); margin: 0; padding: 0;">
+            <li><a href="../index.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Home</a></li>
+            <li><span style="color: var(--text-muted);">&gt;</span></li>
+            <li><a href="../index.html#services" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Services</a></li>
+            <li><span style="color: var(--text-muted);">&gt;</span></li>
+            <li><span style="color: var(--neon-cyan);">Ruby on Rails Developer</span></li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
     <!-- Service Detail Hero Section -->
     <section class="hero-section">
       <div class="section-container">
@@ -113,42 +276,120 @@
       </div>
     </section>
 
-    <!-- Services Offered -->
+    <!-- Stronger Local SEO Section -->
+    <section class="local-seo-section" style="border-block-end: 1px solid var(--border-color); background-color: var(--bg-deep);">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-badge">Local Presence</div>
+          <h2 class="section-title">Ruby on Rails Development Services in Pune</h2>
+          <p class="section-subtitle">Delivering high-caliber engineering locally in Maharashtra and remotely across India.</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto; text-align: left; line-height: 1.8;">
+          <p class="about-text" style="margin-bottom: 1.5rem;">
+            Operating from Pune, India's thriving technology hub, I offer specialized Rails engineering to local **Pune startups** in Hinjawadi, Kharadi, Baner, and Magarpatta. By being local, I provide seamless timezone alignment and physical collaboration options for founders seeking trusted software development.
+          </p>
+          <p class="about-text">
+            In addition to local engagements, I partner with **Indian businesses** in Mumbai, Bangalore, Delhi NCR, and offer **remote consulting across India** and to offshore clients. Whether you need a local consultant to audit database bottlenecks or a remote developer to drive your SaaS backend to release, I offer senior-level expertise tailored for fast execution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities / Services Offered -->
     <section class="experience-section">
       <div class="section-container">
         <div class="section-header">
           <div class="section-badge">Capabilities</div>
-          <h2 class="section-title">Ruby on Rails Services</h2>
+          <h2 class="section-title">Services Offered</h2>
           <p class="section-subtitle">A breakdown of developer services I specialize in and deliver.</p>
         </div>
 
         <div class="skills-grid" style="margin-bottom: 4rem;">
           <div class="glass-card">
             <h3>SaaS Development</h3>
-            <p style="margin-top: 0.5rem; font-size: 0.95rem;">
+            <p style="margin-top: 0.5rem; font-size: 0.95rem; color: var(--text-secondary);">
               Building multi-tenant applications, custom subscription logics, payment gateway integrations (Stripe, Razorpay), role-based permissions, and responsive dashboard interfaces.
             </p>
           </div>
           
           <div class="glass-card">
             <h3>API Development</h3>
-            <p style="margin-top: 0.5rem; font-size: 0.95rem;">
+            <p style="margin-top: 0.5rem; font-size: 0.95rem; color: var(--text-secondary);">
               Designing secure, robust RESTful APIs and GraphQL endpoints for mobile app backends and external system sync, conforming to OpenAPI standards.
             </p>
           </div>
 
           <div class="glass-card">
             <h3>Performance Optimization</h3>
-            <p style="margin-top: 0.5rem; font-size: 0.95rem;">
+            <p style="margin-top: 0.5rem; font-size: 0.95rem; color: var(--text-secondary);">
               Resolving N+1 query problems, database indexing, caching strategies using Redis, and optimizing heavy background job architectures with Sidekiq.
             </p>
           </div>
 
           <div class="glass-card">
             <h3>Legacy Modernization</h3>
-            <p style="margin-top: 0.5rem; font-size: 0.95rem;">
+            <p style="margin-top: 0.5rem; font-size: 0.95rem; color: var(--text-secondary);">
               Upgrading legacy Ruby and Rails versions, refactoring large monoliths into clean patterns, increasing test coverage, and resolving technical debt.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Rails & Industries Served -->
+    <section class="about-section" style="border-block-end: 1px solid var(--border-color); background-color: var(--bg-deep);">
+      <div class="section-container grid-2">
+        <div>
+          <div class="section-badge">Advantages</div>
+          <h2 class="section-title" style="margin-bottom: 1.5rem;">Why Ruby on Rails?</h2>
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <h4 style="color: var(--neon-cyan);">⚡ Rapid Development</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">The "convention over configuration" principle allows us to build product MVP features 30-40% faster than other frameworks.</p>
+            </div>
+            <div>
+              <h4 style="color: var(--neon-cyan);">💰 Lower Development Costs</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Faster shipping cycles translate directly to fewer engineering hours, saving capital for launch marketing.</p>
+            </div>
+            <div>
+              <h4 style="color: var(--neon-cyan);">📈 Scalability</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">With proper database indexing, Redis caching, and Sidekiq worker pools, Rails scales to millions of requests daily.</p>
+            </div>
+            <div>
+              <h4 style="color: var(--neon-cyan);">🔒 High Security</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Built-in protections against SQL injection, XSS, CSRF, and session hijacking keep user data secure by default.</p>
+            </div>
+            <div>
+              <h4 style="color: var(--neon-cyan);">🛠️ High Maintainability</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Standardized directory patterns mean any Rails engineer can easily read, audit, and contribute to the codebase.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-card">
+          <div class="section-badge">Domains</div>
+          <h3 style="margin-bottom: 1.5rem; color: var(--neon-purple);">Industries Served</h3>
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div style="border-left: 2px solid var(--neon-purple); padding-left: 1rem;">
+              <h4>Fintech</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">Double-entry ledger databases, gateway integration, security audits.</p>
+            </div>
+            <div style="border-left: 2px solid var(--neon-cyan); padding-left: 1rem;">
+              <h4>ERP Platforms</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">Custom inventory management, role scopes, automated PDF billing modules.</p>
+            </div>
+            <div style="border-left: 2px solid var(--neon-purple); padding-left: 1rem;">
+              <h4>E-commerce</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">High-availability checkouts, complex coupon validation engine, user cart caching.</p>
+            </div>
+            <div style="border-left: 2px solid var(--neon-cyan); padding-left: 1rem;">
+              <h4>Healthcare</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">HIPAA-friendly secure database structures, audit trails, and doctor-patient portal systems.</p>
+            </div>
+            <div style="border-left: 2px solid var(--neon-purple); padding-left: 1rem;">
+              <h4>SaaS Products</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">Multi-tenant structures, stripe metered billing, automated API hooks.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -163,10 +404,10 @@
           <p class="section-subtitle">The tech stack I leverage to build highly stable backends.</p>
         </div>
 
-        <div class="skills-grid">
+        <div class="skills-grid" style="margin-bottom: 4rem;">
           <div class="glass-card skill-category-card">
             <h3>Backend Engine</h3>
-            <ul class="skills-list" style="margin-top: 1rem;">
+            <ul class="skills-list" style="margin-top: 1rem; list-style: none;">
               <li style="display: flex; justify-content: space-between; padding-block: 0.5rem; border-bottom: 1px solid var(--border-color);">
                 <span>Ruby on Rails</span>
                 <span style="color: var(--neon-cyan);">Version 5.x - 7.x</span>
@@ -184,7 +425,7 @@
 
           <div class="glass-card skill-category-card">
             <h3>Databases & Cache</h3>
-            <ul class="skills-list" style="margin-top: 1rem;">
+            <ul class="skills-list" style="margin-top: 1rem; list-style: none;">
               <li style="display: flex; justify-content: space-between; padding-block: 0.5rem; border-bottom: 1px solid var(--border-color);">
                 <span>PostgreSQL</span>
                 <span style="color: var(--neon-purple);">Relational DBMS</span>
@@ -202,7 +443,7 @@
 
           <div class="glass-card skill-category-card">
             <h3>Hosting & Cloud</h3>
-            <ul class="skills-list" style="margin-top: 1rem;">
+            <ul class="skills-list" style="margin-top: 1rem; list-style: none;">
               <li style="display: flex; justify-content: space-between; padding-block: 0.5rem; border-bottom: 1px solid var(--border-color);">
                 <span>Amazon EC2 / ECS</span>
                 <span style="color: var(--neon-cyan);">Compute Instances</span>
@@ -222,7 +463,7 @@
     </section>
 
     <!-- Experience & Why Hire Me -->
-    <section class="about-section">
+    <section class="about-section" style="background-color: var(--bg-deep); border-block: 1px solid var(--border-color);">
       <div class="section-container grid-2">
         <div class="about-content">
           <div class="section-badge">Why Abhimanyu</div>
@@ -230,7 +471,7 @@
           <p class="about-text" style="margin-bottom: 1.5rem;">
             With over 7 years of corporate and startup software engineering, I offer direct <strong>freelance ruby on rails developer</strong> services. I have built secure fintech applications, designed complex master data management systems, and optimized enterprise resource planning (ERP) systems.
           </p>
-          <ul class="skills-list" style="text-align: left; display: flex; flex-direction: column; gap: 0.75rem;">
+          <ul class="skills-list" style="text-align: left; display: flex; flex-direction: column; gap: 0.75rem; list-style: none;">
             <li><strong>✓ Direct Communication:</strong> You work directly with me. No project managers, account executives, or agency bottlenecks.</li>
             <li><strong>✓ No Agency Overhead:</strong> You pay strictly for senior-level engineering output, not high office rents or sales commissions.</li>
             <li><strong>✓ Senior Expertise:</strong> I write clean, testable code, design stable schemas, and configure secure infrastructures.</li>
@@ -243,15 +484,15 @@
             <div style="display: flex; flex-direction: column; gap: 1rem;">
               <div style="border-left: 2px solid var(--neon-purple); padding-left: 1rem;">
                 <h4>Fintech</h4>
-                <p style="font-size: 0.85rem;">Secure transactional APIs and ledger databases.</p>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">Secure transactional APIs and ledger databases.</p>
               </div>
               <div style="border-left: 2px solid var(--neon-cyan); padding-left: 1rem;">
                 <h4>ERP & MDM</h4>
-                <p style="font-size: 0.85rem;">Complex data schemas and scalable enterprise architectures.</p>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">Complex data schemas and scalable enterprise architectures.</p>
               </div>
               <div style="border-left: 2px solid var(--neon-purple); padding-left: 1rem;">
                 <h4>E-commerce</h4>
-                <p style="font-size: 0.85rem;">Inventory systems, multi-currency handling, and payment flow.</p>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">Inventory systems, multi-currency handling, and payment flow.</p>
               </div>
             </div>
           </div>
@@ -259,8 +500,58 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- Development Process Section -->
     <section class="experience-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-badge">Workflow</div>
+          <h2 class="section-title">Rails Development Process</h2>
+          <p class="section-subtitle">A structured, six-stage engineering workflow to ensure stable code and timely releases.</p>
+        </div>
+        
+        <div class="skills-grid" style="margin-bottom: 4rem;">
+          <div class="glass-card">
+            <h4 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">1. Requirements Analysis</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Scoping the product goals, detailing user flows, mapping third-party integrations, and defining API payload shapes.
+            </p>
+          </div>
+          <div class="glass-card">
+            <h4 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">2. Architecture Design</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Designing database schemas, configuring active record associations, planning background worker queues, and mapping AWS hosting sizes.
+            </p>
+          </div>
+          <div class="glass-card">
+            <h4 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">3. Agile Development</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Writing clean, modular Rails code (Models, Controllers, Services), managing database migrations, and executing features in sprints.
+            </p>
+          </div>
+          <div class="glass-card">
+            <h4 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">4. Comprehensive Testing</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Developing robust test specifications using RSpec or Minitest, performing security gem audits, and profiling query database speeds.
+            </p>
+          </div>
+          <div class="glass-card">
+            <h4 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">5. Cloud Deployment</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Setting up GitHub actions CI/CD pipelines, deploying on AWS (EC2/ECS, RDS, S3), configuring SSL certs and reverse proxies (Nginx).
+            </p>
+          </div>
+          <div class="glass-card">
+            <h4 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">6. Support & Maintenance</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Continuous performance log auditing, upgrading security dependencies, bug fixes, and database cache pruning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expanded FAQ Section -->
+    <section class="experience-section" style="background-color: var(--bg-deep); border-block: 1px solid var(--border-color);">
       <div class="section-container" style="max-width: 850px;">
         <div class="section-header">
           <div class="section-badge">FAQ</div>
@@ -270,37 +561,44 @@
 
         <div style="display: flex; flex-direction: column; gap: 1.5rem; text-align: left;">
           <div class="glass-card">
-            <h4 style="color: var(--neon-cyan); font-size: 1.1rem; margin-bottom: 0.5rem;">How much does a Ruby on Rails developer cost in Pune?</h4>
-            <p style="font-size: 0.95rem;">
+            <h4 style="color: var(--neon-cyan); font-size: 1.1rem; margin-bottom: 0.5rem;">Is Ruby on Rails still relevant in 2026?</h4>
+            <p style="font-size: 0.95rem; color: var(--text-secondary);">
+              Absolutely. Rails remains the framework of choice for companies prioritizing delivery speed and stability. Major platforms like GitHub, Shopify, and Airbnb run on Rails. Rails 7.x/8.x introduced native importmaps, solid queue systems, and robust performance improvements that keep it highly competitive in 2026.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <h4 style="color: var(--neon-cyan); font-size: 1.1rem; margin-bottom: 0.5rem;">How much does Ruby on Rails development cost?</h4>
+            <p style="font-size: 0.95rem; color: var(--text-secondary);">
               My consulting and freelance pricing is structured to offer senior-level development at competitive rates. Because you work with me directly, you skip the agency margin. I offer both hourly consulting rates and fixed-price project quotes depending on your requirements.
             </p>
           </div>
 
           <div class="glass-card">
-            <h4 style="color: var(--neon-cyan); font-size: 1.1rem; margin-bottom: 0.5rem;">Can you work with existing Rails applications?</h4>
-            <p style="font-size: 0.95rem;">
-              Yes, a significant part of my work involves taking over existing Rails applications. I audit the codebase, fix urgent bugs, resolve database performance issues, upgrade old Ruby/Rails versions, and build out new features.
+            <h4 style="color: var(--neon-cyan); font-size: 1.1rem; margin-bottom: 0.5rem;">Can you modernize an existing Rails application?</h4>
+            <p style="font-size: 0.95rem; color: var(--text-secondary);">
+              Yes. I frequently take over older codebases, upgrade Ruby and Rails versions (e.g., from Rails 4/5 to 7.x), refactor fat models and controllers, resolve database query bottlenecks, and transition hosting setups to Docker/AWS.
             </p>
           </div>
 
           <div class="glass-card">
             <h4 style="color: var(--neon-cyan); font-size: 1.1rem; margin-bottom: 0.5rem;">Do you provide AWS deployment support?</h4>
-            <p style="font-size: 0.95rem;">
+            <p style="font-size: 0.95rem; color: var(--text-secondary);">
               Yes. I configure secure deployment pipelines on AWS using EC2, RDS (for PostgreSQL/MySQL databases), S3 (for assets), and configure SSL certs. I can also help dockerize your Rails application for ECS containerized deployment.
             </p>
           </div>
 
           <div class="glass-card">
-            <h4 style="color: var(--neon-cyan); font-size: 1.1rem; margin-bottom: 0.5rem;">Do you write tests for the application?</h4>
-            <p style="font-size: 0.95rem;">
-              Absolutely. I write automated tests using RSpec or Minitest to cover core database operations, controllers, and APIs, ensuring your platform is stable and doesn't break during future updates.
+            <h4 style="color: var(--neon-cyan); font-size: 1.1rem; margin-bottom: 0.5rem;">Can you work with offshore teams?</h4>
+            <p style="font-size: 0.95rem; color: var(--text-secondary);">
+              Yes. I have years of experience working within distributed engineering teams, collaborating asynchronously using Slack, GitHub pull request reviews, Jira task boards, and aligning timezone slots for stand-up meetings.
             </p>
           </div>
 
           <div class="glass-card">
-            <h4 style="color: var(--neon-cyan); font-size: 1.1rem; margin-bottom: 0.5rem;">How do we get started?</h4>
-            <p style="font-size: 0.95rem;">
-              We start with a free consultation call. We discuss your technical requirements, timelines, and current codebase (if any). Afterward, I provide an implementation estimate, and we kick off development.
+            <h4 style="color: var(--neon-cyan); font-size: 1.1rem; margin-bottom: 0.5rem;">Do you provide ongoing maintenance?</h4>
+            <p style="font-size: 0.95rem; color: var(--text-secondary);">
+              Yes. I offer monthly retainer agreements to monitor server uptime, apply critical security patches (gems updates), monitor background workers (Sidekiq queues), perform database optimizations, and resolve bugs as they emerge.
             </p>
           </div>
         </div>
