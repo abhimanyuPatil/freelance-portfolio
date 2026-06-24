@@ -981,3 +981,42 @@ p {
   font-size: 0.8rem;
   color: var(--text-muted);
 }
+
+/* Breadcrumbs Styling */
+.breadcrumb-container {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.breadcrumb-container .section-container {
+  padding-block: 1rem;
+}
+
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb li a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb li a:hover {
+  color: var(--neon-cyan);
+}
+
+.breadcrumb li span.separator {
+  color: var(--text-muted);
+}
+
+.breadcrumb li span.current {
+  color: var(--neon-cyan);
+}
