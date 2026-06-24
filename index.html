@@ -393,30 +393,58 @@
           <p class="section-subtitle">Deep dives into custom systems, backend integrations, and serverless workflows.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 800px; margin: 0 auto;">
-          <div class="glass-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem;">
-              <span class="section-badge" style="letter-spacing: 1px; color: var(--neon-cyan); border-color: var(--neon-cyan);">WhatsApp Feedback Automation</span>
-              <span class="timeline-duration" style="background-color: rgba(255,255,255,0.05); padding: 0.3rem 0.75rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">6+ Months</span>
-            </div>
-            <h3 style="font-size: 1.5rem; margin-top: 0.25rem;">
-              <a href="case-studies/bizecho.html" style="color: var(--text-primary); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--neon-cyan)'" onmouseout="this.style.color='var(--text-primary)'">
-                Building BizEcho – A WhatsApp-First Customer Feedback & Reputation Platform
-              </a>
-            </h3>
-            <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin: 0;">
-              A serverless platform enabling businesses to collect customer feedback directly on WhatsApp, automate follow-ups, track sentiment indexes (NPS/CSAT), and proactively manage online reputation.
-            </p>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; align-items: center;">
-              <span class="seo-tag-item" style="border-color: var(--neon-cyan); color: var(--neon-cyan);">Node.js</span>
-              <span class="seo-tag-item" style="border-color: var(--neon-cyan); color: var(--neon-cyan);">TypeScript</span>
-              <span class="seo-tag-item" style="border-color: var(--neon-purple); color: var(--neon-purple);">AWS Lambda</span>
-              <span class="seo-tag-item" style="border-color: var(--neon-purple); color: var(--neon-purple);">DynamoDB</span>
-              <span class="seo-tag-item">SQS</span>
-              <span class="seo-tag-item" style="border-color: var(--neon-cyan); color: var(--neon-cyan);">WhatsApp API</span>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+          <!-- Card 1: BizEcho -->
+          <div class="glass-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; justify-content: space-between;">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="section-badge" style="letter-spacing: 1px; color: var(--neon-cyan); border-color: var(--neon-cyan);">WhatsApp Feedback Automation</span>
+                <span class="timeline-duration" style="background-color: rgba(255,255,255,0.05); padding: 0.3rem 0.75rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">6+ Months</span>
+              </div>
+              <h3 style="font-size: 1.4rem; margin-top: 0.25rem; line-height: 1.4;">
+                <a href="case-studies/bizecho.html" style="color: var(--text-primary); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--neon-cyan)'" onmouseout="this.style.color='var(--text-primary)'">
+                  Building BizEcho – A WhatsApp Feedback Platform
+                </a>
+              </h3>
+              <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin: 0;">
+                A serverless platform enabling businesses to collect customer feedback directly on WhatsApp, automate follow-ups, and proactively manage online reputation.
+              </p>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; align-items: center;">
+                <span class="seo-tag-item" style="border-color: var(--neon-cyan); color: var(--neon-cyan);">Node.js</span>
+                <span class="seo-tag-item" style="border-color: var(--neon-cyan); color: var(--neon-cyan);">TypeScript</span>
+                <span class="seo-tag-item" style="border-color: var(--neon-purple); color: var(--neon-purple);">AWS Lambda</span>
+                <span class="seo-tag-item">SQS</span>
+              </div>
             </div>
             <div style="margin-top: 1rem;">
-              <a href="case-studies/bizecho.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;">Read Case Study &rarr;</a>
+              <a href="case-studies/bizecho.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem; display: inline-block;">Read Case Study &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Runique Store -->
+          <div class="glass-card" style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; gap: 1rem; justify-content: space-between;">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="section-badge" style="letter-spacing: 1px; color: var(--neon-cyan); border-color: var(--neon-cyan);">E-commerce Brand</span>
+                <span class="timeline-duration" style="background-color: rgba(255,255,255,0.05); padding: 0.3rem 0.75rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">Shopify</span>
+              </div>
+              <h3 style="font-size: 1.4rem; margin-top: 0.25rem; line-height: 1.4;">
+                <a href="case-studies/runique.html" style="color: var(--text-primary); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--neon-cyan)'" onmouseout="this.style.color='var(--text-primary)'">
+                  Building Runique Store – A Running E-commerce Brand
+                </a>
+              </h3>
+              <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin: 0;">
+                A specialized e-commerce storefront for endurance runners. Combines Shopify customizations, Razorpay payment integrations, and marketing conversion trackers.
+              </p>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; align-items: center;">
+                <span class="seo-tag-item" style="border-color: var(--neon-cyan); color: var(--neon-cyan);">Shopify</span>
+                <span class="seo-tag-item" style="border-color: var(--neon-purple); color: var(--neon-purple);">Custom Theme</span>
+                <span class="seo-tag-item" style="border-color: var(--neon-cyan); color: var(--neon-cyan);">Razorpay</span>
+                <span class="seo-tag-item">Analytics</span>
+              </div>
+            </div>
+            <div style="margin-top: 1rem;">
+              <a href="case-studies/runique.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem; display: inline-block;">Read Case Study &rarr;</a>
             </div>
           </div>
         </div>
