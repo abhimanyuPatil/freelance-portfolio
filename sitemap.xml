@@ -2,8 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
       <loc>https://freelance.abhimanyupatil.com/</loc>
-      <lastmod>2026-06-10</lastmod>
+      <lastmod>2026-06-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://freelance.abhimanyupatil.com/services/ruby-on-rails-developer-pune.html</loc>
+      <lastmod>2026-06-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://freelance.abhimanyupatil.com/services/react-developer-pune.html</loc>
+      <lastmod>2026-06-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://freelance.abhimanyupatil.com/case-studies/index.html</loc>
+      <lastmod>2026-06-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://freelance.abhimanyupatil.com/case-studies/bizecho.html</loc>
+      <lastmod>2026-06-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://freelance.abhimanyupatil.com/case-studies/runique.html</loc>
+      <lastmod>2026-06-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
    </url>
 </urlset>
