@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Case Study: BizEcho WhatsApp Feedback Platform | Abhimanyu Patil</title>
+  <meta name="description" content="Discover how Abhimanyu Patil architected BizEcho, a serverless, event-driven WhatsApp feedback automation platform on AWS, Node.js, and DynamoDB for reputation management.">
+  <meta name="keywords" content="whatsapp feedback automation, serverless case study, aws lambda dynamodb sqs, freelance full stack developer pune, Abhimanyu Patil">
+  <meta name="author" content="Abhimanyu Patil">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freelance.abhimanyupatil.com/case-studies/bizecho.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freelance.abhimanyupatil.com/case-studies/bizecho.html">
+  <meta property="og:title" content="Case Study: BizEcho WhatsApp Feedback Platform | Abhimanyu Patil">
+  <meta property="og:description" content="Discover how Abhimanyu Patil architected BizEcho, a serverless, event-driven WhatsApp feedback automation platform on AWS, Node.js, and DynamoDB for reputation management.">
+  <meta property="og:image" content="https://freelance.abhimanyupatil.com/assets/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://freelance.abhimanyupatil.com/case-studies/bizecho.html">
+  <meta property="twitter:title" content="Case Study: BizEcho WhatsApp Feedback Platform | Abhimanyu Patil">
+  <meta property="twitter:description" content="Discover how Abhimanyu Patil architected BizEcho, a serverless, event-driven WhatsApp feedback automation platform on AWS, Node.js, and DynamoDB for reputation management.">
+  <meta property="twitter:image" content="https://freelance.abhimanyupatil.com/assets/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet (Relative to parent folder) -->
+  <link rel="stylesheet" href="../index.css">
+
+  <!-- Structured Data / JSON-LD for Local, Person, Breadcrumb & TechArticle SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://freelance.abhimanyupatil.com/#service",
+        "name": "Abhimanyu Patil - Freelance Full Stack Developer in Pune",
+        "url": "https://freelance.abhimanyupatil.com",
+        "logo": "https://freelance.abhimanyupatil.com/assets/logo.png",
+        "image": "https://freelance.abhimanyupatil.com/assets/og-image.jpg",
+        "description": "Hire an experienced Freelance Full Stack Developer in Pune with 7+ years of expertise in React, Node.js, Ruby on Rails, AWS, and scalable web application development.",
+        "telephone": "+91 8446161390",
+        "email": "abhimanyu.patil39@gmail.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Koregaon Park",
+          "addressLocality": "Pune",
+          "addressRegion": "Maharashtra",
+          "postalCode": "411001",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.5362",
+          "longitude": "73.8940"
+        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Pune"
+          },
+          {
+            "@type": "Country",
+            "name": "India"
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://freelance.abhimanyupatil.com/#person",
+        "name": "Abhimanyu Patil",
+        "jobTitle": "Senior Freelance Full Stack Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Pune University"
+        },
+        "sameAs": [
+          "https://github.com/abhimanyuPatil/",
+          "https://www.linkedin.com/in/abhimanyu-patil91/"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://freelance.abhimanyupatil.com/case-studies/bizecho.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://freelance.abhimanyupatil.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Case Studies",
+            "item": "https://freelance.abhimanyupatil.com/case-studies/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "BizEcho Case Study",
+            "item": "https://freelance.abhimanyupatil.com/case-studies/bizecho.html"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://freelance.abhimanyupatil.com/case-studies/bizecho.html#article",
+        "headline": "Case Study: Building BizEcho – A WhatsApp-First Customer Feedback & Reputation Management Platform",
+        "description": "How Abhimanyu Patil designed and built BizEcho, a serverless, event-driven WhatsApp feedback automation platform on AWS, Node.js, and DynamoDB.",
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Abhimanyu Patil"
+        },
+        "about": [
+          {
+            "@type": "Thing",
+            "name": "WhatsApp Cloud API"
+          },
+          {
+            "@type": "Thing",
+            "name": "AWS Lambda"
+          },
+          {
+            "@type": "Thing",
+            "name": "Serverless Architecture"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Ambient background glow effects -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-bracket">&lt;</span>Abhimanyu<span class="logo-bracket">/&gt;</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="index.html" class="active">Case Studies</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Mobile menu trigger -->
+      <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="nav-menu" class="mobile-nav">
+    <button class="mobile-nav-close" id="mobile-menu-close" aria-label="Close Menu">&times;</button>
+    <ul class="mobile-nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#services">Services</a></li>
+      <li><a href="index.html">Case Studies</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Visual Breadcrumb Navigation Trail -->
+    <div class="breadcrumb-container" style="background-color: rgba(0,0,0,0.15); border-bottom: 1px solid var(--border-color);">
+      <div class="section-container" style="padding-block: 1rem;">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <ol style="list-style: none; display: flex; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono); margin: 0; padding: 0;">
+            <li><a href="../index.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Home</a></li>
+            <li><span style="color: var(--text-muted);">&gt;</span></li>
+            <li><a href="index.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Case Studies</a></li>
+            <li><span style="color: var(--text-muted);">&gt;</span></li>
+            <li><span style="color: var(--neon-cyan);">BizEcho</span></li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Case Study Hero Section -->
+    <section class="hero-section">
+      <div class="section-container">
+        <div class="hero-badge">Full Stack Case Study</div>
+        <h1 class="hero-title">
+          Building BizEcho – A <span class="highlight">WhatsApp-First</span> Customer Feedback Platform
+        </h1>
+        <p class="hero-subtitle">
+          An architectural breakdown of a serverless feedback collection and reputation management platform built with AWS, SQS, Node.js, and WhatsApp Cloud API.
+        </p>
+        <div class="hero-actions">
+          <a href="../index.html#contact" class="btn btn-primary">Connect For Similar Projects</a>
+          <a href="index.html" class="btn btn-secondary">All Case Studies</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Metadata / Tech Sheet -->
+    <section style="padding-block: 2rem; border-bottom: 1px solid var(--border-color);">
+      <div class="section-container">
+        <div class="glass-card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 2rem; text-align: left;">
+          <div>
+            <h3 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 0.5rem;">Project</h3>
+            <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin: 0;">BizEcho</p>
+          </div>
+          <div>
+            <h3 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 0.5rem;">Role</h3>
+            <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin: 0;">Full Stack Developer</p>
+          </div>
+          <div>
+            <h3 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 0.5rem;">Duration</h3>
+            <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin: 0;">6+ Months</p>
+          </div>
+          <div>
+            <h3 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 0.5rem;">Tech Stack</h3>
+            <p style="font-size: 0.95rem; font-weight: 500; color: var(--neon-cyan); margin: 0; line-height: 1.4;">
+              Node.js, TypeScript, AWS Lambda, API Gateway, DynamoDB, SQS, WhatsApp Cloud API, React, Serverless Framework
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Case Study Body -->
+    <section class="about-section" style="padding-block: 4rem;">
+      <div class="section-container" style="max-width: 900px; margin: 0 auto; text-align: left;">
+        
+        <!-- Overview -->
+        <div style="margin-bottom: 3.5rem;">
+          <div class="section-badge">Overview</div>
+          <h2 style="font-size: 1.85rem; margin-top: 0.5rem; margin-bottom: 1.25rem; color: var(--text-primary);">About BizEcho</h2>
+          <p class="about-text" style="margin-bottom: 1rem;">
+            Businesses often struggle to collect actionable customer feedback. Traditional email surveys suffer from low response rates, while negative customer experiences frequently go unnoticed until they impact retention and online reputation.
+          </p>
+          <p class="about-text">
+            BizEcho was built to solve this challenge by enabling businesses to collect customer feedback directly on WhatsApp, automate engagement workflows, monitor customer sentiment, and improve online reviews through a centralized platform.
+          </p>
+        </div>
+
+        <!-- Problem Statement -->
+        <div style="margin-bottom: 3.5rem;">
+          <div class="section-badge">Problem Statement</div>
+          <h2 style="font-size: 1.85rem; margin-top: 0.5rem; margin-bottom: 1.25rem; color: var(--text-primary);">The Challenge</h2>
+          <p class="about-text" style="margin-bottom: 1.25rem;">
+            Before BizEcho, partner businesses faced severe hurdles in tracking client happiness:
+          </p>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">[!]</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Low response rates from email-based feedback systems.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">[!]</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Lack of real-time visibility into customer satisfaction.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">[!]</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Manual follow-ups for dissatisfied customers, causing operational delays.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">[!]</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Difficulty converting positive customer experiences into public online reviews.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">[!]</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">No centralized system for managing customer feedback across multiple branches and locations.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Solution & Key Features -->
+        <div style="margin-bottom: 3.5rem;">
+          <div class="section-badge">Solution</div>
+          <h2 style="font-size: 1.85rem; margin-top: 0.5rem; margin-bottom: 1.25rem; color: var(--text-primary);">The Solution</h2>
+          <p class="about-text" style="margin-bottom: 1.5rem;">
+            I helped build a highly scalable, serverless feedback management platform that automates customer engagement through the WhatsApp Cloud API.
+          </p>
+          
+          <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--neon-cyan);">Key Features</h3>
+          
+          <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+            
+            <div class="glass-card" style="padding: 1.5rem; text-align: left;">
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">⚡ WhatsApp Feedback Automation</h4>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                Triggers automated feedback requests immediately after a service is completed. Customers rate their experience interactively using WhatsApp buttons, generating personalized conversation paths based on their scores.
+              </p>
+            </div>
+
+            <div class="glass-card" style="padding: 1.5rem; text-align: left;">
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">📊 Customer Sentiment Tracking</h4>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                Aggregates Net Promoter Score (NPS), Customer Satisfaction (CSAT), and text reviews into a centralized management dashboard to plot satisfaction trends over time.
+              </p>
+            </div>
+
+            <div class="glass-card" style="padding: 1.5rem; text-align: left;">
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">🛡️ Smart Review Management</h4>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                Intelligently redirects highly positive responders to public platforms like Google Reviews to build social proof. Conversely, negative comments are routed internally to support agents for instant resolution.
+              </p>
+            </div>
+
+            <div class="glass-card" style="padding: 1.5rem; text-align: left;">
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">📍 Multi-Location & Branch Support</h4>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                Enables branch-wise performance metrics, permitting corporate managers to benchmark individual store performance, view local ratings, and export reports.
+              </p>
+            </div>
+
+            <div class="glass-card" style="padding: 1.5rem; text-align: left;">
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">🔄 Lead & Engagement Workflows</h4>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                Maintains follow-up queues for non-responders, structures message intervals safely, and tracks complete user engagement analytics.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Technical Architecture -->
+        <div style="margin-bottom: 3.5rem;">
+          <div class="section-badge">Architecture</div>
+          <h2 style="font-size: 1.85rem; margin-top: 0.5rem; margin-bottom: 1.25rem; color: var(--text-primary);">Technical System Design</h2>
+          <p class="about-text" style="margin-bottom: 1.5rem;">
+            To handle bursty campaign volumes and maintain near-zero server infrastructure costs, we designed an event-driven serverless architecture on AWS.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="border-left: 2px solid var(--neon-cyan); padding-left: 1.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Cloud Backend & Database</h4>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                The core backend is implemented using Node.js and TypeScript on AWS Lambda, exposed via AWS API Gateway REST endpoints. SQS (Simple Queue Service) buffers incoming webhook events from WhatsApp, processing messages asynchronously to prevent API rate limits. Amazon DynamoDB serves as a fast, horizontally-scalable key-value store to manage active conversation states, business records, and customer surveys.
+              </p>
+            </div>
+
+            <div style="border-left: 2px solid var(--neon-purple); padding-left: 1.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">WhatsApp Integration Engine</h4>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                Integrates with Meta's WhatsApp Cloud API. The service validates and matches payload responses (interactive buttons, quick replies) against active survey flows. Includes automated validation for approved message templates to prevent spam blocks.
+              </p>
+            </div>
+
+            <div style="border-left: 2px solid var(--neon-cyan); padding-left: 1.25rem;">
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Analytics & Frontend Dashboard</h4>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                A single-page React application providing corporate managers with real-time feedback feeds, branch-level reporting, custom campaign configurators, and customer communication widgets.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Challenges & Solutions -->
+        <div style="margin-bottom: 3.5rem;">
+          <div class="section-badge">Challenges</div>
+          <h2 style="font-size: 1.85rem; margin-top: 0.5rem; margin-bottom: 1.25rem; color: var(--text-primary);">Engineering Challenges & Solutions</h2>
+          
+          <div style="display: flex; flex-direction: column; gap: 1.75rem;">
+            
+            <div class="glass-card" style="padding: 1.75rem; text-align: left;">
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--neon-purple);">[CHALLENGE 01]</span>
+              <h4 style="font-size: 1.2rem; margin-top: 0.25rem; margin-bottom: 0.75rem; color: var(--text-primary);">Scaling Webhook Message Processing</h4>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.75rem;">
+                When feedback campaigns were triggered, thousands of customers received notifications simultaneously. The resulting webhook events from WhatsApp (delivered, read, button clicks) flooded our API Gateway, causing backend spikes and threat of data loss.
+              </p>
+              <p style="color: var(--neon-cyan); font-size: 0.95rem; line-height: 1.6; margin: 0; font-family: var(--font-mono);">
+                <strong>Solution:</strong> Decoupled ingestion from processing. Webhooks immediately push raw events to an AWS SQS queue and respond with a 200 OK. Downstream consumer Lambda functions process queues at a controlled concurrency limit, utilizing Dead Letter Queues (DLQ) for failed messages with automated retries.
+              </p>
+            </div>
+
+            <div class="glass-card" style="padding: 1.75rem; text-align: left;">
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--neon-purple);">[CHALLENGE 02]</span>
+              <h4 style="font-size: 1.2rem; margin-top: 0.25rem; margin-bottom: 0.75rem; color: var(--text-primary);">WhatsApp Template & Payload Restrictions</h4>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.75rem;">
+                WhatsApp enforces strict parameters on message structures, requiring pre-approved templates and strict formatting. Slight payload deviations result in silent message drop-offs or API errors.
+              </p>
+              <p style="color: var(--neon-cyan); font-size: 0.95rem; line-height: 1.6; margin: 0; font-family: var(--font-mono);">
+                <strong>Solution:</strong> Created a template configuration engine that automatically maps business parameters to Meta-compatible JSON payloads, runs schema validation locally before sending requests, and logs delivery failures via callback status tracking.
+              </p>
+            </div>
+
+            <div class="glass-card" style="padding: 1.75rem; text-align: left;">
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--neon-purple);">[CHALLENGE 03]</span>
+              <h4 style="font-size: 1.2rem; margin-top: 0.25rem; margin-bottom: 0.75rem; color: var(--text-primary);">DynamoDB Analytical Queries Degradation</h4>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.75rem;">
+                As the volume of customer responses crossed hundreds of thousands, reading and aggregating CSAT/NPS ratings location-wise became sluggish, leading to database scans and dashboard delays.
+              </p>
+              <p style="color: var(--neon-cyan); font-size: 0.95rem; line-height: 1.6; margin: 0; font-family: var(--font-mono);">
+                <strong>Solution:</strong> Restructured DynamoDB partition and sort keys using Global Secondary Indexes (GSIs). Implemented aggregate database write-sharding, and pre-calculated hourly summaries using a DynamoDB Stream trigger, keeping dashboard response times below 150ms.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- My Contributions -->
+        <div style="margin-bottom: 3.5rem;">
+          <div class="section-badge">Contributions</div>
+          <h2 style="font-size: 1.85rem; margin-top: 0.5rem; margin-bottom: 1.25rem; color: var(--text-primary);">My Contributions</h2>
+          <p class="about-text" style="margin-bottom: 1.25rem;">
+            As a key developer on the project, my responsibilities covered the complete engineering lifecycle:
+          </p>
+          <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr; gap: 0.75rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">&gt;</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Designed, developed, and deployed serverless REST APIs on AWS Lambda.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">&gt;</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Built custom integrations with the WhatsApp Cloud API using webhooks.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">&gt;</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Designed DynamoDB data models and configured GSI keys for analytical aggregates.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">&gt;</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Configured SQS messaging queues and DLQ error fallback rules.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">&gt;</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Built components in the React dashboard, implementing dashboard analytics visualizations.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">&gt;</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Setup automated deployment pipelines using the Serverless Framework.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">&gt;</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Collaborated with Product Owners and QA teams to formulate end-to-end integration tests.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Impact -->
+        <div style="margin-bottom: 3.5rem;">
+          <div class="section-badge">Impact</div>
+          <h2 style="font-size: 1.85rem; margin-top: 0.5rem; margin-bottom: 1.25rem; color: var(--text-primary);">Project Impact</h2>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            
+            <div class="glass-card" style="padding: 1.5rem; border-left: 2px solid var(--neon-cyan); text-align: left;">
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">📈 Business Impact</h4>
+              <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+                <li>• Tripled customer feedback response rates compared to email.</li>
+                <li>• Automated 90% of follow-ups, reducing manual overhead.</li>
+                <li>• Accelerated public review acquisition by 40% in key branches.</li>
+                <li>• Allowed branch managers to resolve complaints before negative reviews hit Google.</li>
+              </ul>
+            </div>
+
+            <div class="glass-card" style="padding: 1.5rem; border-left: 2px solid var(--neon-purple); text-align: left;">
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">⚙️ Technical Impact</h4>
+              <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+                <li>• Zero base-server maintenance overhead due to Serverless structure.</li>
+                <li>• Scaled seamlessly to handle campaigns sending 50,000+ texts.</li>
+                <li>• Cut database query times from 2s down to under 150ms.</li>
+                <li>• Robust webhook queue processing with near-zero message loss.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Key Learnings -->
+        <div style="margin-bottom: 3.5rem;">
+          <div class="section-badge">Key Learnings</div>
+          <h2 style="font-size: 1.85rem; margin-top: 0.5rem; margin-bottom: 1.25rem; color: var(--text-primary);">Key Learnings</h2>
+          <p class="about-text" style="margin-bottom: 1.25rem;">
+            Developing this platform provided highly valuable technical and architectural insights:
+          </p>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">[01]</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">How to design robust, backpressured, event-driven integrations with third-party webhooks.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">[02]</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Structuring schema models for DynamoDB to optimize for real-time dashboard aggregation queries.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">[03]</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Implementing strict validation for high-throughput messaging channels to comply with platform policies.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--neon-cyan); font-family: var(--font-mono); font-weight: bold;">[04]</span>
+              <span style="color: var(--text-secondary); line-height: 1.6;">Balancing user interaction speed, batch job scheduling, and operational cost budgets.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Local SEO & Trust Builders in Pune -->
+    <section class="local-seo-section" style="border-block-start: 1px solid var(--border-color); background-color: var(--bg-deep);">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-badge">Local Delivery</div>
+          <h2 class="section-title">WhatsApp & Serverless Consulting in Pune</h2>
+          <p class="section-subtitle">Collaborating locally in Pune and building high-scale custom web services for Indian enterprises.</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto; text-align: left; line-height: 1.8;">
+          <p class="about-text" style="margin-bottom: 1.5rem;">
+            From my development office in Pune, I deliver modern communications platforms that align with the high standards expected by local startup ecosystems in Hinjawadi, Baner, and Kalyani Nagar. Being located in Pune, I offer direct collaboration, workshops, and architectural review sessions to build robust software.
+          </p>
+          <p class="about-text">
+            If your business needs a senior software developer to integrate customer review workflows, build custom web app dashboards, or move servers to efficient AWS Lambda architectures, I offer high-caliber full-stack engineering tailored for immediate business impact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="border-block-start: 1px solid var(--border-color); padding-block: 5rem;">
+      <div class="section-container" style="max-width: 800px; margin: 0 auto;">
+        <h2 style="font-size: 2.25rem; margin-bottom: 1rem; color: var(--text-primary);">Want to Build Something Similar?</h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+          Whether you need a specialized WhatsApp API integration, serverless APIs on AWS, or a database-tuned React dashboard, let's connect and discuss your requirements.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="../index.html#contact" class="btn btn-primary" style="padding: 0.8rem 2rem; font-size: 1rem;">Book a Free Consultation</a>
+          <a href="https://wa.me/918446042956?text=Hi%20Abhimanyu,%20I%20read%20your%20BizEcho%20case%20study%20and%20want%20to%20discuss%20a%20project..." target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.8rem 2rem; font-size: 1rem;">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">&lt;Abhimanyu/&gt;</span>
+          <p>Senior Freelance Full Stack Software Engineer. Building secure, database-optimized, and performant custom software solutions.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="index.html">Case Studies</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-socials">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/abhimanyuPatil/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/abhimanyu-patil91/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://medium.com/@abhimanyu.patil" target="_blank" rel="noopener noreferrer">Medium</a></li>
+            <li><a href="mailto:abhimanyu.patil39@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Abhimanyu Patil. All rights reserved. Designed for local SEO in Pune, MH, India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script file (Relative to parent folder) -->
+  <script src="../app.js"></script>
+</body>
+</html>

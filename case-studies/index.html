@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Engineering Case Studies | Abhimanyu Patil - Full Stack Developer</title>
+  <meta name="description" content="Explore real-world software engineering case studies. Learn how Abhimanyu Patil builds scalable serverless backends, WhatsApp integrations, and high-performance React frontends.">
+  <meta name="keywords" content="full stack developer case studies, serverless backend case study, whatsapp api integration case study, Abhimanyu Patil">
+  <meta name="author" content="Abhimanyu Patil">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freelance.abhimanyupatil.com/case-studies/index.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freelance.abhimanyupatil.com/case-studies/index.html">
+  <meta property="og:title" content="Engineering Case Studies | Abhimanyu Patil">
+  <meta property="og:description" content="Explore real-world software engineering case studies. Learn how Abhimanyu Patil builds scalable serverless backends, WhatsApp integrations, and high-performance React frontends.">
+  <meta property="og:image" content="https://freelance.abhimanyupatil.com/assets/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://freelance.abhimanyupatil.com/case-studies/index.html">
+  <meta property="twitter:title" content="Engineering Case Studies | Abhimanyu Patil">
+  <meta property="twitter:description" content="Explore real-world software engineering case studies. Learn how Abhimanyu Patil builds scalable serverless backends, WhatsApp integrations, and high-performance React frontends.">
+  <meta property="twitter:image" content="https://freelance.abhimanyupatil.com/assets/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet (Relative to parent folder) -->
+  <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+  <!-- Ambient background glow effects -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-bracket">&lt;</span>Abhimanyu<span class="logo-bracket">/&gt;</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="index.html" class="active">Case Studies</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Mobile menu trigger -->
+      <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="nav-menu" class="mobile-nav">
+    <button class="mobile-nav-close" id="mobile-menu-close" aria-label="Close Menu">&times;</button>
+    <ul class="mobile-nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#services">Services</a></li>
+      <li><a href="index.html">Case Studies</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Visual Breadcrumb Navigation Trail -->
+    <div class="breadcrumb-container" style="background-color: rgba(0,0,0,0.15); border-bottom: 1px solid var(--border-color);">
+      <div class="section-container" style="padding-block: 1rem;">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <ol style="list-style: none; display: flex; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono); margin: 0; padding: 0;">
+            <li><a href="../index.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Home</a></li>
+            <li><span style="color: var(--text-muted);">&gt;</span></li>
+            <li><span style="color: var(--neon-cyan);">Case Studies</span></li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Case Studies Hero Section -->
+    <section class="hero-section">
+      <div class="section-container" style="padding-block: 4rem 2rem;">
+        <div class="hero-badge">Project Portfolio</div>
+        <h1 class="hero-title">
+          Engineering <span class="highlight">Case Studies</span>
+        </h1>
+        <p class="hero-subtitle">
+          In-depth architectural breakdowns of custom software products, serverless microservices, and integrations built to solve complex business problems.
+        </p>
+      </div>
+    </section>
+
+    <!-- Case Studies Grid Section -->
+    <section class="experience-section" style="padding-block-start: 0;">
+      <div class="section-container">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 2.5rem;">
+          
+          <!-- BizEcho Case Study Tile -->
+          <div class="glass-card" style="display: flex; flex-direction: column; gap: 1.5rem; text-align: left; padding: 2.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+              <div>
+                <span class="section-badge" style="letter-spacing: 1px;">Case Study: BizEcho</span>
+                <h2 style="font-size: 1.75rem; margin-top: 0.25rem;">
+                  <a href="bizecho.html" style="color: var(--text-primary); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--neon-cyan)'" onmouseout="this.style.color='var(--text-primary)'">
+                    Building BizEcho – A WhatsApp-First Customer Feedback & Reputation Management Platform
+                  </a>
+                </h2>
+              </div>
+              <span class="timeline-duration" style="background-color: rgba(255,255,255,0.05); padding: 0.3rem 0.75rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">
+                Duration: 6+ Months
+              </span>
+            </div>
+            
+            <p style="color: var(--text-secondary); line-height: 1.7;">
+              BizEcho is a centralized feedback management platform that enables businesses to collect feedback directly via WhatsApp, automate follow-up workflows, track satisfaction trends (NPS/CSAT), and proactively route negative reviews to internal support channels before they impact public online reputation.
+            </p>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="font-size: 0.9rem; color: var(--text-muted);">
+                <strong>Role:</strong> Full Stack Developer
+              </div>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+                <span style="font-size: 0.9rem; color: var(--text-muted); margin-right: 0.5rem;"><strong>Tech Stack:</strong></span>
+                <span class="seo-tag-item" style="border-color: var(--neon-cyan); color: var(--neon-cyan);">Node.js</span>
+                <span class="seo-tag-item" style="border-color: var(--neon-cyan); color: var(--neon-cyan);">TypeScript</span>
+                <span class="seo-tag-item" style="border-color: var(--neon-purple); color: var(--neon-purple);">AWS Lambda</span>
+                <span class="seo-tag-item" style="border-color: var(--neon-purple); color: var(--neon-purple);">DynamoDB</span>
+                <span class="seo-tag-item">SQS</span>
+                <span class="seo-tag-item" style="border-color: var(--neon-cyan); color: var(--neon-cyan);">WhatsApp API</span>
+                <span class="seo-tag-item">React</span>
+                <span class="seo-tag-item">Serverless</span>
+              </div>
+            </div>
+            
+            <div style="margin-top: 1rem;">
+              <a href="bizecho.html" class="btn btn-primary" style="padding: 0.7rem 1.75rem; font-size: 0.9rem;">
+                Read Case Study &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Placeholder for Future Case Study -->
+          <div class="glass-card" style="opacity: 0.6; text-align: left; padding: 2.5rem; border-style: dashed;">
+            <span class="section-badge" style="letter-spacing: 1px; color: var(--text-muted);">Next Project</span>
+            <h3 style="font-size: 1.5rem; margin-top: 0.25rem; color: var(--text-muted);">E-commerce Custom ERP Optimization</h3>
+            <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.95rem;">
+              Detailed review of scaling inventory databases, resolving SQL locking bugs, and integrating customized shipping APIs for a mid-market retailer in India. Coming soon.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">&lt;Abhimanyu/&gt;</span>
+          <p>Senior Freelance Full Stack Software Engineer. Building secure, database-optimized, and performant custom software solutions.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="index.html">Case Studies</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-socials">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/abhimanyuPatil/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/abhimanyu-patil91/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://medium.com/@abhimanyu.patil" target="_blank" rel="noopener noreferrer">Medium</a></li>
+            <li><a href="mailto:abhimanyu.patil39@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Abhimanyu Patil. All rights reserved. Designed for local SEO in Pune, MH, India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script file (Relative to parent folder) -->
+  <script src="../app.js"></script>
+</body>
+</html>
